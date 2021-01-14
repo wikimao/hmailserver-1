@@ -1,6 +1,6 @@
 name: CI
 env:
- OPENSSL_VERSION: 1.1.1g
+ OPENSSL_VERSION: 1.1.1i
  BOOST_VERSION: 1_72_0
  HMAILSERVER_VERSION: 5.7.0
  HMAILSERVER_BUILD_NUMBER_BASE: 2521
@@ -22,7 +22,7 @@ jobs:
     - name: Checkout OpenSSL dependency
       uses: actions/checkout@v2
       with:
-         repository: martinknafve/hmailserver-dep-openssl-${{env.OPENSSL_VERSION}}
+         repository: hmailserver/hmailserver-dep-openssl-${{env.OPENSSL_VERSION}}
          ref: refs/heads/master
          path: dependencies\openssl
          
